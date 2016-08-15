@@ -4,130 +4,220 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView topLeft;
+    TextView topMid;
+    TextView topRight;
+    TextView midLeft;
+    TextView mid;
+    TextView midRight;
+    TextView lowerLeft;
+    TextView lowerMid;
+    TextView lowerRight;
+
+    boolean turn = true; //true for X, false for O
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//TOP LEFT SQUARE
-        final TextView mTopLeft = (TextView) findViewById(R.id.topLeft);
-        mTopLeft.setOnClickListener(new View.OnClickListener() {
+        topLeft = (TextView) findViewById(R.id.topLeft);
+        topMid = (TextView) findViewById(R.id.topMid);
+        topRight = (TextView) findViewById(R.id.topRight);
+        midLeft = (TextView) findViewById(R.id.midLeft);
+        mid = (TextView) findViewById(R.id.mid);
+        midRight = (TextView) findViewById(R.id.midRight);
+        lowerLeft = (TextView) findViewById(R.id.lowerLeft);
+        lowerMid = (TextView) findViewById(R.id.lowerMid);
+        lowerRight = (TextView) findViewById(R.id.lowerRight);
+
+
+        topLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (mTopLeft.getText().equals("X")) {
-                    mTopLeft.setText("O");
+                if (turn) {
+                    topLeft.setText("X");
                 } else {
-                    mTopLeft.setText("X");
+                    topLeft.setText("O");
                 }
+                turn = !turn;
+                checkForWin();
             }
         });
-//TOP MIDDLE SQUARE
-        final TextView mTopMid = (TextView) findViewById(R.id.topMid);
-        mTopMid.setOnClickListener(new View.OnClickListener() {
+
+
+        topMid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view2) {
 
-                if (mTopMid.getText().equals("X")) {
-                    mTopMid.setText("O");
+                if (turn) {
+                    topMid.setText("X");
                 } else {
-                    mTopMid.setText("X");
+                    topMid.setText("O");
                 }
+                turn = !turn;
+                checkForWin();
             }
         });
-//TOP RIGHT SQUARE
-        final TextView mTopRight = (TextView) findViewById(R.id.topRight);
-        mTopRight.setOnClickListener(new View.OnClickListener() {
+
+
+        topRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view3) {
 
-                if (mTopRight.getText().equals("X")) {
-                    mTopRight.setText("O");
+                if (turn) {
+                    topRight.setText("X");
                 } else {
-                    mTopRight.setText("X");
+                    topRight.setText("O");
                 }
+                turn = !turn;
+                checkForWin();
             }
         });
-//MIDDLE LEFT SQUARE
-        final TextView mMidLeft = (TextView) findViewById(R.id.midLeft);
-        mMidLeft.setOnClickListener(new View.OnClickListener() {
+
+
+        midLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view4) {
 
-                if (mMidLeft.getText().equals("X")) {
-                    mMidLeft.setText("O");
+                if (turn) {
+                    midLeft.setText("X");
                 } else {
-                    mMidLeft.setText("X");
+                    midLeft.setText("O");
                 }
+                turn = !turn;
+                checkForWin();
             }
         });
-//MIDDLE SQUARE
-        final TextView mMid = (TextView) findViewById(R.id.mid);
-        mMid.setOnClickListener(new View.OnClickListener() {
+
+
+        mid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view5) {
 
-                if (mMid.getText().equals("X")) {
-                    mMid.setText("O");
+                if (turn) {
+                    mid.setText("X");
                 } else {
-                    mMid.setText("X");
+                    mid.setText("O");
                 }
+                turn = !turn;
+                checkForWin();
             }
         });
-//MIDDLE RIGHT SQUARE
-        final TextView mMidRight = (TextView) findViewById(R.id.midRight);
-        mMidRight.setOnClickListener(new View.OnClickListener() {
+
+
+        midRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view6) {
 
-                if (mMidRight.getText().equals("X")) {
-                    mMidRight.setText("O");
+                if (turn) {
+                    midRight.setText("X");
                 } else {
-                    mMidRight.setText("X");
+                    midRight.setText("O");
                 }
+                turn = !turn;
+                checkForWin();
             }
         });
-        //LOWER LEFT SQUARE
-        final TextView mLowerLeft = (TextView) findViewById(R.id.lowerLeft);
-        mLowerLeft.setOnClickListener(new View.OnClickListener() {
+
+
+        lowerLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view7) {
 
-                if (mLowerLeft.getText().equals("X")) {
-                    mLowerLeft.setText("O");
+                if (turn) {
+                    lowerLeft.setText("X");
                 } else {
-                    mLowerLeft.setText("X");
+                    lowerLeft.setText("O");
                 }
+                turn = !turn;
+                checkForWin();
             }
         });
-//        LOWER MIDDLE SQUARE
-        final TextView mLowerMid = (TextView) findViewById(R.id.lowerMid);
-        mLowerMid.setOnClickListener(new View.OnClickListener() {
+
+
+        lowerMid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view8) {
 
-                if (mLowerMid.getText().equals("X")) {
-                    mLowerMid.setText("O");
+                if (turn) {
+                    lowerMid.setText("X");
                 } else {
-                    mLowerMid.setText("X");
+                    lowerMid.setText("O");
                 }
+                turn = !turn;
+                checkForWin();
             }
         });
-//        LOWER RIGHT SQUARE
-        final TextView mLowerRight = (TextView) findViewById(R.id.lowerRight);
-        mLowerRight.setOnClickListener(new View.OnClickListener() {
+
+
+        lowerRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view9) {
 
-                if (mLowerRight.getText().equals("X")) {
-                    mLowerRight.setText("O");
+                if (turn) {
+                    lowerRight.setText("X");
                 } else {
-                    mLowerRight.setText("X");
+                    lowerRight.setText("O");
                 }
+                turn = !turn;
+                checkForWin();
             }
         });
     }
+
+
+
+        void checkForWin() {
+        boolean gameOver = false;
+
+            if (topLeft.getText() == topMid.getText() && topMid.getText() == topRight.getText())
+            gameOver = true;
+
+
+        else if (topLeft.getText() == mid.getText() && mid.getText() == lowerRight.getText())
+            gameOver = true;
+
+
+        else if (topLeft.getText() == midLeft.getText() && midLeft.getText() == lowerLeft.getText())
+            gameOver = true;
+
+
+        else if (topMid.getText() == mid.getText() && mid.getText() == lowerMid.getText())
+            gameOver = true;
+
+
+        else if (topRight.getText() == mid.getText() && mid.getText() == lowerLeft.getText())
+            gameOver = true;
+
+
+        else if (topRight.getText() == midRight.getText() && midRight.getText() == lowerRight.getText())
+            gameOver = true;
+
+
+        else if (midLeft.getText() == mid.getText() && mid.getText() == midRight.getText())
+            gameOver = true;
+
+
+        else if (lowerLeft.getText() == lowerMid.getText() && lowerMid.getText() == lowerRight.getText())
+            gameOver = true;
+
+        if (gameOver){
+            if (turn) {
+
+            Toast.makeText(this, "Somebody Won?", Toast.LENGTH_SHORT).show();
+        }
+
+        }
+
 }
+
+
+
