@@ -176,45 +176,80 @@ public class MainActivity extends AppCompatActivity {
 
 
         void checkForWin() {
-        boolean gameOver = false;
+            boolean gameOver = false;
 
-            if (topLeft.getText() == topMid.getText() && topMid.getText() == topRight.getText())
-            gameOver = true;
+            if (((topLeft.getText() == "X")||(topLeft.getText() == "O"))
+                    &&((topMid.getText() == "X")||(topMid.getText() == "O"))
+                    &&((topRight.getText() == "X")||(topRight.getText() == "O"))) {
 
+                if (topLeft.getText() == topMid.getText() && topMid.getText() == topRight.getText())
+                    gameOver = true;
+            }
 
-        else if (topLeft.getText() == mid.getText() && mid.getText() == lowerRight.getText())
-            gameOver = true;
+            else if (((topLeft.getText() == "X")||(topLeft.getText() == "O"))
+                    &&((mid.getText() == "X")||(mid.getText() == "O"))
+                    &&((lowerRight.getText() == "X")||(lowerRight.getText() == "O"))){
 
+                if (topLeft.getText() == mid.getText() && mid.getText() == lowerRight.getText())
+                    gameOver = true;
+            }
 
-        else if (topLeft.getText() == midLeft.getText() && midLeft.getText() == lowerLeft.getText())
-            gameOver = true;
+            else if (((topLeft.getText() == "X")||(topLeft.getText() == "O"))
+                    &&((midLeft.getText() == "X")||(midLeft.getText() == "O"))
+                    &&((lowerLeft.getText() == "X")||(lowerLeft.getText() == "O"))) {
 
+                if (topLeft.getText() == midLeft.getText() && midLeft.getText() == lowerLeft.getText())
+                    gameOver = true;
+            }
 
-        else if (topMid.getText() == mid.getText() && mid.getText() == lowerMid.getText())
-            gameOver = true;
+            else if (((topMid.getText() == "X")||(topMid.getText() == "O"))
+                    &&((mid.getText() == "X")||(mid.getText() == "O"))
+                    &&((lowerMid.getText() == "X")||(lowerMid.getText() == "O"))) {
 
+                if (topMid.getText() == mid.getText() && mid.getText() == lowerMid.getText())
+                    gameOver = true;
+            }
 
-        else if (topRight.getText() == mid.getText() && mid.getText() == lowerLeft.getText())
-            gameOver = true;
+            else if (((topRight.getText() == "X")||(topRight.getText() == "O"))
+                    &&((mid.getText() == "X")||(mid.getText() == "O"))
+                    &&((lowerLeft.getText() == "X")||(lowerLeft.getText() == "O"))) {
 
+                if (topRight.getText() == mid.getText() && mid.getText() == lowerLeft.getText())
+                    gameOver = true;
+            }
 
-        else if (topRight.getText() == midRight.getText() && midRight.getText() == lowerRight.getText())
-            gameOver = true;
+            else if (((topRight.getText() == "X")||(topRight.getText() == "O"))
+                    &&((midRight.getText() == "X")||(midRight.getText() == "O"))
+                    &&((lowerRight.getText() == "X")||(lowerRight.getText() == "O"))) {
 
+                if (topRight.getText() == midRight.getText() && midRight.getText() == lowerRight.getText())
+                    gameOver = true;
+            }
 
-        else if (midLeft.getText() == mid.getText() && mid.getText() == midRight.getText())
-            gameOver = true;
+            else if (((topRight.getText() == "X")||(topRight.getText() == "O"))
+                    &&((mid.getText() == "X")||(mid.getText() == "O"))
+                    &&((midRight.getText() == "X")||(midRight.getText() == "O"))) {
 
+                if (midLeft.getText() == mid.getText() && mid.getText() == midRight.getText())
+                    gameOver = true;
+            }
 
-        else if (lowerLeft.getText() == lowerMid.getText() && lowerMid.getText() == lowerRight.getText())
-            gameOver = true;
+            else if (((lowerLeft.getText() == "X")||(lowerLeft.getText() == "O"))
+                    &&((lowerMid.getText() == "X")||(lowerMid.getText() == "O"))
+                    &&((lowerRight.getText() == "X")||(lowerRight.getText() == "O"))) {
+                if (lowerLeft.getText() == lowerMid.getText() && lowerMid.getText() == lowerRight.getText())
+                    gameOver = true;
+            }
 
-        if (gameOver){
-            if (turn) {
+            if (gameOver) {
+                if (turn) {
+                    Toast.makeText(this, "O Wins!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(this, "X Wins", Toast.LENGTH_SHORT).show();
+                }
 
-            Toast.makeText(this, "Somebody Won?", Toast.LENGTH_SHORT).show();
-        }
-
+            }
         }
 
 }
