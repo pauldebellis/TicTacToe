@@ -281,6 +281,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             midRight.setEnabled(false);
             lowerLeft.setEnabled(false);
             lowerRight.setEnabled(false);
+            lowerMid.setEnabled(false);
         }
     }
 
