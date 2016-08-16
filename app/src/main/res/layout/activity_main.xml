@@ -15,11 +15,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:stretchColumns="0,1,2">
+        android:stretchColumns="0,1,2"
+        android:background="@android:color/black"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="85dp">
         <TableRow
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:gravity="center_horizontal">
             <TextView
                 android:id="@+id/topLeft"
@@ -27,25 +30,25 @@
                 android:textSize="80sp"
                 android:padding="15dp"
                 android:layout_gravity="center_horizontal"
-                android:background="#00ffffff"/>
+                android:background="@android:color/white" />
             <TextView
                 android:id="@+id/topMid"
                 android:text="    "
                 android:textSize="80sp"
                 android:padding="15dp"
                 android:layout_gravity="center_horizontal"
-                android:background="#00ffffff"/>
+                android:background="@android:color/white" />
             <TextView
                 android:id="@+id/topRight"
                 android:text="    "
                 android:textSize="80sp"
                 android:padding="15dp"
                 android:layout_gravity="center_horizontal"
-                android:background="#00ffffff"/>
+                android:background="@android:color/white" />
         </TableRow>
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:gravity="center_horizontal">
             <TextView
                 android:id="@+id/midLeft"
@@ -53,25 +56,25 @@
                 android:textSize="80sp"
                 android:padding="15dp"
                 android:layout_gravity="center_horizontal"
-                android:background="#00ffffff"/>
+                android:background="@android:color/white" />
             <TextView
                 android:id="@+id/mid"
                 android:text="    "
                 android:textSize="80sp"
                 android:padding="15dp"
                 android:layout_gravity="center_horizontal"
-                android:background="#00ffffff"/>
+                android:background="@android:color/white" />
             <TextView
                 android:id="@+id/midRight"
                 android:text="    "
                 android:textSize="80sp"
                 android:padding="15dp"
                 android:layout_gravity="center_horizontal"
-                android:background="#00ffffff"/>
+                android:background="@android:color/white" />
         </TableRow>
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:gravity="center_horizontal">
             <TextView
                 android:id="@+id/lowerLeft"
@@ -79,21 +82,21 @@
                 android:textSize="80sp"
                 android:padding="15dp"
                 android:layout_gravity="center_horizontal"
-                android:background="#00ffffff"/>
+                android:background="@android:color/white" />
             <TextView
                 android:id="@+id/lowerMid"
                 android:text="    "
                 android:textSize="80dp"
                 android:padding="15dp"
                 android:layout_gravity="center_horizontal"
-                android:background="#00ffffff"/>
+                android:background="@android:color/white" />
             <TextView
                 android:id="@+id/lowerRight"
                 android:text="    "
                 android:textSize="80dp"
                 android:padding="15dp"
                 android:layout_gravity="center_horizontal"
-                android:background="#00ffffff"/>
+                android:background="@android:color/white" />
         </TableRow>
     </TableLayout>
 
